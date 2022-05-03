@@ -119,7 +119,7 @@ jokes =[
 while True:
    try:
     greeting = ""
-    now = datetime.datetime.now()
+    now = datetime.datetime.now(pytz.timezone('Asia/Calcutta'))
     hour = now.hour 
     if hour < 12:
         greeting = "Good morning!"
@@ -127,8 +127,8 @@ while True:
         greeting = "Good afternoon!"
     else:
         greeting = "Good night!" 
-    start = datetime.datetime(2000, 9, 17, 0, 0, 0)
-    difference = datetime.datetime.now() - start
+    start = datetime.datetime(2000, 9, 17, 0, 0, 0,tzinfo=pytz.timezone('Asia/Calcutta'))
+    difference = datetime.datetime.now(pytz.timezone('Asia/Calcutta')) - start
     count_hours, rem = divmod(difference.seconds, 3600)
     count_minutes, count_seconds = divmod(rem, 60)
     if difference.days == 0 and count_hours == 0 and count_minutes == 0 and count_seconds == 0:
