@@ -134,7 +134,7 @@ while True:
     if difference.days == 0 and count_hours == 0 and count_minutes == 0 and count_seconds == 0:
         print("Good bye!")
         break
-    text = greeting + '\n' + jokes[random.randint(0,len(jokes)-1)] + "\n .\n" + str(difference.days) + " days  \n" + str(count_hours) + " hours  \n"
+    text = greeting + '\n'+ "\n .\n" + str(difference.days) + " days  \n" + str(count_hours) + " hours of magic \n"+ jokes[random.randint(0,len(jokes)-1)]
     sleep(15)
 
     biotextField = driver.find_element_by_xpath('/html/body/div[1]/section/main/div/article/form/div[4]/div/textarea')
