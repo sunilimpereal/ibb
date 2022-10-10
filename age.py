@@ -38,7 +38,7 @@ sleep(15)
 password = driver.find_element_by_xpath('//*[@id="loginForm"]/div/div[2]/div/label/input')
 password.click()
 # password.send_keys('sunilhari6363865667')
-password.send_keys('sunil6363865667@hari')
+password.send_keys('sunilhari6363865667')
 sleep(15)
  
 loginbtn = driver.find_element_by_xpath('//*[@id="loginForm"]/div/div[3]')
