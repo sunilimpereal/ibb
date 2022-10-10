@@ -61,11 +61,11 @@ while True:
     now = datetime.datetime.now(pytz.timezone('Asia/Calcutta'))
     hour = now.hour 
     if hour < 12:
-        greeting = "Good morning!"
+        greeting = "Good Morning!"
     elif hour < 18:
-        greeting = "Good afternoon!"
+        greeting = "Good Afternoon!"
     else:
-        greeting = "Good night!" 
+        greeting = "Good Night!" 
     start = datetime.datetime(2000, 9, 17, 0, 0, 0,tzinfo=pytz.timezone('Asia/Calcutta'))
     difference = datetime.datetime.now(pytz.timezone('Asia/Calcutta')) - start
     count_hours, rem = divmod(difference.seconds, 3600)
@@ -73,7 +73,7 @@ while True:
     if difference.days == 0 and count_hours == 0 and count_minutes == 0 and count_seconds == 0:
         print("Good bye!")
         break
-    text = greeting + '\n'+ str(difference.days) + " days  " + str(count_hours) + " hours\n"
+    text = greeting + '\n'+ str(difference.days) + " days : " + str(count_hours) + " hours : " + str(count_minutes) + " mins of magic\n "
     sleep(15)
 
     biotextField = driver.find_element_by_xpath('/html/body/div[1]/div/div/div/div[1]/div/div/div/div[1]/div[1]/section/main/div/article/form/div[4]/div/textarea')
@@ -84,6 +84,6 @@ while True:
     submitbutton.click()
     a = a+1
     print(a)
-    sleep(60*60)
+    sleep(60*15)
    except(e):
        print(e)
